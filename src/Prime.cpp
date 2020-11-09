@@ -1,55 +1,53 @@
 #include "Prime.h"
 
-bool Prime::checkPrime(int num)
+void Prime::setValue(int val)
 {
-  bool flag = true;
-  for(int i = 2; i * i <= num; i++)
-  {
-    if (num % i == 0)
-      flag = false;
-  }
-  return flag;
-}
-
-int Prime::countBetween(Prime& second)
-{
-  int cnt = 0;
-  for (int i = value + 1; i < second.value; i++)
-  {
-    if (checkPrime(i))
-      cnt++;
-  }
-  return cnt;
-}
-
-Prime Prime::nextPrime()
-{
-  value++;
-  while (!checkPrime(value))
-    value++;
-
-  Prime ans;
-  ans.value = value;
-  return ans;
-}
-
-void Prime::setValue(int a)
-{
-  value = a;
-}
-
-int Prime::getValue()
-{
-  return value;
+	this->value = val;
 }
 
 bool Prime::isValid()
 {
-  bool flag = true;
-  for(int i = 2; i * i <= value; i++)
-  {
-    if (value % i == 0)
-      flag = false;
-  }
-  return flag;
+	return checkPrime(this->value);
+}
+
+bool Prime::checkPrime(int val)
+{
+	bool isprime = true;
+	for (size_t i = 2; i < (val/2)+1; i++)
+	{
+		if (val % i == 0) {
+			isprime = false;
+			break;
+		}
+	}
+	return isprime;
+}
+
+int Prime::countBetween(Prime& num)
+{
+	unsigned count{ 0 };
+	for (size_t i = this->value+1; i < num.value; i++)
+	{
+		if (checkPrime(i))
+			count++;
+	}
+	return count;
+}
+
+Prime Prime::nextPrime()
+{
+	Prime num;
+	num.setValue(this->value + 1);
+	while (1) {
+		if (checkPrime(num.value))
+			break;
+		else
+			num.setValue(num.value + 1);
+	}
+	return num;
+}
+
+int Prime::getValue()
+{
+	return this->value;
 }
