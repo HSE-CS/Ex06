@@ -5,7 +5,7 @@
 
 int main()
 {
-	Prime num;
+	Prime nu;
 	nu.setValue(2);
 	int resul=nu.getValue();
 	std :: cout << resul << std :: endl;
