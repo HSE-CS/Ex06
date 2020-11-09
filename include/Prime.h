@@ -10,7 +10,7 @@ private:
 public:
   void setValue(int);
   bool isValid() const;
-  bool testPrime(int) const;
+  bool checkPrime(int) const;
   int countBetween(Prime&) const;
   Prime nextPrime() const;
   int getValue() const;
