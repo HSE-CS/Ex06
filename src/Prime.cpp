@@ -3,6 +3,7 @@
 void Prime::setValue(int value){
     settedNumber = value;
 }
+
 bool Prime::isValid(){
     for (size_t i = 2; i<=sqrt(settedNumber); ++i){
         if (settedNumber % i == 0){
@@ -11,6 +12,7 @@ bool Prime::isValid(){
     }
     return true;
 }
+
 bool Prime::testPrime(int value){
     for (size_t i = 2; i<=sqrt(value); ++i){
         if (value % i == 0){
@@ -19,26 +21,44 @@ bool Prime::testPrime(int value){
     }
     return true;
 } 
+
 int Prime::countBetween(Prime& value1){
     int counter = 0;
     bool check = true;
-    for (size_t i = settedNumber+1; i < value1.getValue();++i ){
-        if (i%2 == 0){
-            continue;
-        }
-        else{
-            for (size_t j = 2; j<=sqrt(i);++j){
+    if (settedNumber < value1.getValue()){
+        for (size_t i = settedNumber+1; i < value1.getValue();++i ){
+            for (size_t j = 2; j<i;++j){
                 if (i%j == 0){
                     check = false;
+                    break;
+                }
+            }
+                if (check){
+                counter++;
+            }
+            check = true;
+        }
+    }
+    else{
+        if (settedNumber < value1.getValue()){
+        for (size_t i = value1.getValue() + 1; i < settedNumber;++i ){
+            for (size_t j = 2; j<i;++j){
+                if (i%j == 0){
+                    check = false;
+                    break;
                 }
             }
             if (check){
                 counter++;
             }
+            
+            check = true;
+            }
         }
     }
     return counter;
 }
+
 Prime Prime::nextPrime(){
     bool flag = true;
     Prime potentialNext;
