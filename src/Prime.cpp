@@ -15,7 +15,7 @@ bool Prime::isValid()
             return false;
     return true;
 }
-bool Prime::testPrime(int prime) 
+bool Prime::checkPrime(int prime) 
 {
     if (prime == 1)
         return false;
