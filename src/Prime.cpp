@@ -1,4 +1,4 @@
-#include "Prime.h"
+#include "Prime.hpp"
 
 void Prime::setValue(int value){
     settedNumber = value;
@@ -13,7 +13,7 @@ bool Prime::isValid(){
     return true;
 }
 
-bool Prime::testPrime(int value){
+bool Prime::checkPrime(int value){
     for (size_t i = 2; i<=sqrt(value); ++i){
         if (value % i == 0){
             return false;

@@ -1,4 +1,4 @@
-#include "Prime.h"
+#include "Prime.hpp"
 
 int main (){
 
@@ -14,7 +14,7 @@ int main (){
 
     std::cout<<"Demonstration of testPrime()"<<std::endl;
     
-    bool result = num1.Prime::testPrime(17); // true
+    bool result = num1.Prime::checkPrime(17); // true
     std::cout << result<< std::endl;
 
     std::cout<<"Demonstration of setValue()"<<std::endl;
