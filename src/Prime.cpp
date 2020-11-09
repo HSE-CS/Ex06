@@ -1,12 +1,10 @@
 #include"Prime.h"
 #include<cmath>
 
-void Prime::setValue(int x)      //- установить число
-{
+void Prime::setValue(int x){
 	val = x;
 };
-bool Prime::isValid()            //- проверка, действительно ли установленное число простое
-{
+bool Prime::isValid(){           
 	for (int i = 2; i <= sqrt(val); ++i) {
 		if (val % i == 0) {
 			return false;
@@ -14,8 +12,7 @@ bool Prime::isValid()            //- проверка, действительно ли установленное чи
 	}
 	return true;
 };
-bool Prime::checkPrime(int x)    //- проверка переданного числа на простоту
-{
+bool Prime::checkPrime(int x){
 	for (int i = 2; i <= sqrt(x); ++i) {
 		if (x % i == 0) {
 			return false;
@@ -23,8 +20,7 @@ bool Prime::checkPrime(int x)    //- проверка переданного числа на простоту
 	}
 	return true;
 };
-int Prime::countBetween(Prime &p)  //- подсчет количества простых чисел между установленным и переданным
-{
+int Prime::countBetween(Prime &p){
 	int start, end;
 	if (val < p.val) {
 		start = val;
@@ -41,8 +37,7 @@ int Prime::countBetween(Prime &p)  //- подсчет количества простых чисел между ус
 	return count;
 	
 };
-Prime Prime::nextPrime()         //- возвращение простого числа, расположенного следом за установленным
-{
+Prime Prime::nextPrime(){
 	Prime next;
 	next.val = 0;
 	for (int i = val+1; i<INT_MAX; ++i) {
@@ -53,7 +48,6 @@ Prime Prime::nextPrime()         //- возвращение простого числа, расположенного 
 	}
 	return next;
 };
-int Prime::getValue()            //- возвращение установленного числа.
-{
+int Prime::getValue(){
 	return val;
 };
