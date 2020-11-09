@@ -4,7 +4,7 @@
 class Prime
 {
 private:
-    int prime;
+    unsigned long long prime;
 public:
     void setValue(int); //установить число
     bool isValid();  //проверка, действительно ли установленное число простое
