@@ -10,6 +10,7 @@ bool Prime::isValid()
 	return checkPrime(this->value);
 }
 
+
 bool Prime::checkPrime(int val)
 {
 	bool isprime = true;
