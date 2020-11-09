@@ -40,3 +40,5 @@ Prime Prime::nextPrime() {
 int Prime::getValue() {
     return value;
 }
+
+
