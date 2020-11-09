@@ -34,11 +34,19 @@ TEST(ex06, test4)
 }
 TEST(ex06, test5)
 {
+<<<<<<< HEAD
 	Prime num1, num2;
 	num1.setValue(3);
 	num2.setValue(13);
 		int result = num1.countBetween(num2);
 	EXPECT_EQ(3, result);
+=======
+	Prime num1,num2;
+	num1.setValue(3);
+	num2.setValue(13);
+	int result=num1.countBetween(num2);
+	EXPECT_EQ(3,result);
+>>>>>>> 2fde4d1f10ad280b39f1a52f7bb6050825532b05
 }
 TEST(ex06, test6)
 {
