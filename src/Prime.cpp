@@ -1,39 +1,47 @@
 #include "Prime.h"
 #include <cmath>
 
-void Prime::setValue(int set_num)
+void Prime::setValue(int num)
 {
-    num = set_num;
+    this->num = num;
 }
 
 bool Prime::isValid()
 {
-    return testPrime(num);
+    return testPrime(this->num);
 }
 
-Prime nextPrime(); //TODO
-
-bool Prime::testPrime(int test_num)
+Prime Prime::nextPrime()
 {
-    for(int i = 2; i <= sqrt(test_num); i++)
-        if(test_num % i == 0)
+    Prime next_num;
+    int x = this->num + 1;
+    while (!testPrime(x))
+        x++;
+    next_num.num = x;
+    return next_num;
+}
+
+bool Prime::testPrime(int num)
+{
+    for(int i = 2; i <= sqrt(num); i++)
+        if(num % i == 0)
             return false;
     return true;
 }
 
-int Prime::countBetween(Prime& between)
+int Prime::countBetween(Prime& num)
 {
     int i = 0;
     int j = 0;
-    if (num >= between.num)
+    if (this->num >= num.num)
     {
-        i = between.num + 1;
-        j = num;
+        i = num.num + 1;
+        j = this->num;
     }
     else
     {
-        i = num + 1;
-        j = between.num;
+        i = this->num + 1;
+        j = num.num;
     }
 
     Prime num2;
@@ -47,5 +55,5 @@ int Prime::countBetween(Prime& between)
 
 int Prime::getValue()
 {
-    return num;
+    return this->num;
 }

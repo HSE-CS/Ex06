@@ -10,9 +10,8 @@ int main()
     num1.setValue(2);
     cout << "num1 = " << num1.getValue() << endl;
 
-    //TODO
-//    num2=num1.nextPrime();
-//    cout << "num2 = " << num2.getValue() << "\n\n";
+    num2=num1.nextPrime();
+    cout << "next num1 -> num2 = " << num2.getValue() << "\n\n";
 
     cout << "17 is prime? answer: " << num1.testPrime(17) << endl;
     cout << "214 is prime? answer: " << num1.testPrime(214) << "\n\n";
