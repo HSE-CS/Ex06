@@ -1,4 +1,4 @@
-#include "Prime.hpp"
+#include "Prime.h"
 
 int main (){
 

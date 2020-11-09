@@ -1,4 +1,4 @@
-#include "Prime.hpp"
+#include "Prime.h"
 
 void Prime::setValue(int value){
     settedNumber = value;
