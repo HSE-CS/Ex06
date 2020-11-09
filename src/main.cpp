@@ -8,7 +8,7 @@
 using namespace std;
 
 int main(){
-    Prime num1{}, num2{};
+/*    Prime num1{}, num2{};
     num1.setValue(2);
     num2=num1.nextPrime();          // в num2 устанавливается 3
     cout << num2.getValue() << endl;
@@ -19,5 +19,5 @@ int main(){
     int count=num2.countBetween(num1); // count=5
     cout << count << endl;
     bool ans=num2.isValid();        // true
-    cout << ans << endl;
+    cout << ans << endl;*/
 }
