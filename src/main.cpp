@@ -8,6 +8,7 @@ int main() {
 	std::cout << "num1.checkprime: " << num1.checkPrime(num1.getValue()) << std::endl << "num1.isvalid:" << num1.isValid() << std::endl;
 	num2 = num1.nextPrime();
 	std::cout << "num2: " << num2.getValue() << std::endl;
+	
 	for (size_t i = 0; i < 4; i++)
 	{
 		num2 = num2.nextPrime();
