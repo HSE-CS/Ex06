@@ -11,7 +11,7 @@ bool Prime::isValid()
 			return false;
 	return true;
 }
-bool Prime::testPrime(int a)
+bool Prime::checkPrime(int a)
 {
 	for (size_t i = 2; i <= sqrt(a); i++)
 		if (a % i == 0)
@@ -22,7 +22,7 @@ int Prime::countBetween(Prime& a)
 {
 	int count = 0;
 	for (size_t i = fmin(prime,a.prime)+1; i < fmax(a.prime,prime); i++)
-		if (testPrime(i) == 1)
+		if (checkPrime(i) == 1)
 			count++;
 	return count;
 }
@@ -30,7 +30,7 @@ Prime Prime::nextPrime()
 {
 	Prime a;
 	for (int i = prime+1; ; i++)
-		if (testPrime(i) == 1)
+		if (checkPrime(i) == 1)
 		{
 			a.prime = i;
 			return a;

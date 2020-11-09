@@ -8,7 +8,7 @@ int main()
     num2 = num1.nextPrime(); 
     //num2.setValue(12);
     num2.getValue();// в num2 устанавливается 3
-    bool result = num1.testPrime(17); // true
+    bool result = num1.checkPrime(17); // true
     cout << result << endl;
     num2.setValue(17);              // в num2 устанавливаем 17
     cout << endl;
