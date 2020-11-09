@@ -1,23 +1,18 @@
-<<<<<<< HEAD
 #pragma once
-=======
-#pragma once 
->>>>>>> 04c0b9a8b0b31ebbc3e33ab8d4b32e9d6b946427
-#ifndef  PRIME_H
+#ifndef PRIME_H
 #define PRIME_H
+#include<iostream>
 
-class Prime {
+class Prime 
+{
 private:
-	int value;
-	bool isPrime;
+	unsigned long long value;
 public:
-	void setValue(int); //установить число
-	bool isValid();  //проверка, действительно ли установленное число простое
-	bool testPrime(int);  //проверка переданного числа на простоту
-	int countBetween(Prime&);  //подсчет количества простых чисел между установленным и переданным
-	Prime nextPrime();  //возвращение простого числа, расположенного следом за установленным
-	int getValue();  //возвращение установленного числа  
+	void setValue(int);
+	bool isValid();
+	bool checkPrime(int);
+	int countBetween(Prime&);
+	Prime nextPrime();
+	int getValue();
 };
-
-
-#endif // ! PRIME_H
+#endif // !PRIME_H
