@@ -32,21 +32,26 @@ bool Prime::testPrime(int a)
 int Prime::countBetween(Prime& transit)
 {
     Prime save;
-    save.setValue(num);
+    save.setValue(getValue());
     int count = 0;
-    while (save.num < transit.num)
+    while (save.getValue() < transit.getValue())
     {
         count++;
         save.nextPrime();
     }
-
+    return count;
 }
 
 Prime Prime::nextPrime()
 {
     Prime k;
-    k.setValue(num + 1);
-    while (!testPrime(k.num))
-        k.setValue(k.num + 1);
+    k.setValue(getValue() + 1);
+    while (!testPrime(k.getValue()))
+        k.setValue(k.getValue() + 1);
     return k;
+}
+
+int Prime::getValue()
+{
+    return num;
 }

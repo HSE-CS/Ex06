@@ -13,7 +13,7 @@ public:
 	bool testPrime(int);
 	int countBetween(Prime&);
 	Prime nextPrime();
-	int getValue() const;
+	int getValue();
 };
 #endif
 

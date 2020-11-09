@@ -51,12 +51,12 @@ TEST(ex06,test6)
 TEST(ex06,test7)
 {
 	Prime num;
-	bool result=num.checkPrime(18);
+	bool result=num.testPrime(18);
 	EXPECT_EQ(false,result);
 }
 TEST(ex06,test8)
 {
 	Prime num;
-	bool result=num.checkPrime(149);
+	bool result=num.testPrime(149);
 	EXPECT_EQ(true,result);
 }
