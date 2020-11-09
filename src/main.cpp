@@ -13,7 +13,7 @@ int main()
     std::cout << num2.getValue();
     std::cout << "      next prime \n";
 
-    bool result = num1.testPrime(17); // true
+    bool result = num1.checkPrime(17); // true
     std::cout << result;
     std::cout << "      - 1-true, 0-false for num1\n";
 

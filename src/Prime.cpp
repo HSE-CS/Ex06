@@ -11,7 +11,7 @@ bool Prime::isValid(){ // проверка, действительно ли установленное число простое
 	}
 	return true;
 }
-bool Prime::testPrime(int input) { // проверка переданного числа на простоту
+bool Prime::checkPrime(int input) { // проверка переданного числа на простоту
 	for (int i = 2; i < input; i++) {
 		if (input % i == 0) {
 			return false;

@@ -9,7 +9,7 @@ private:
 public:
 	void setValue(int input);
 	bool isValid();
-	bool testPrime(int input);
+	bool checkPrime(int input);
 	int countBetween(Prime& num2); 
 	Prime nextPrime();
 	int getValue();
