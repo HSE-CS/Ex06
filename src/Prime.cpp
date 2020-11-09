@@ -34,12 +34,13 @@ int Prime::countBetween(Prime& transit)
     Prime save;
     if (transit.getValue() > getValue())
     {
-        save.setValue(getValue());
+        save.setValue(getValue() + 1);
         int count = 0;
         while (save.getValue() < transit.getValue())
         {
-            count++;
             save = save.nextPrime();
+            if (save.getValue() < transit.getValue())
+                count++;
         }
         return count;
     }
@@ -47,12 +48,13 @@ int Prime::countBetween(Prime& transit)
         return 0;
     else if (transit.getValue() < getValue())
     {
-        save.setValue(transit.getValue());
+        save.setValue(transit.getValue() + 1);
         int count = 0;
         while (save.getValue() < getValue())
         {
-            count++;
             save = save.nextPrime();
+            if (save.getValue() < getValue())
+                count++;
         }
         return count;
     }
