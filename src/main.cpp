@@ -12,7 +12,7 @@ int main()
     cout<<num1.getValue()<<endl;
     num2=num1.nextPrime();  
     cout<<num2.getValue()<<endl;       
-    bool result=num1.testPrime(17); 
+    bool result=num1.checkPrime(17); 
     cout<<result<<endl;
     num2.setValue(17);              
     int count=num2.countBetween(num1);
