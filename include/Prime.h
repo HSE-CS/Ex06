@@ -2,6 +2,7 @@
 #define PRIME_H
 #define _CRT_SECURE_NO_WARNINGS
 #include <cmath>;
+#include <iostream>;
 
 class Prime
 {
