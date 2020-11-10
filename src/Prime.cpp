@@ -26,7 +26,7 @@ int Prime::getSieveSize() {
 bool Prime::isValid() {
 	if (this->value < 2) return false;
 	double root = sqrt(this->value);
-	for (size_t i = 2; i < root; i++)
+	for (int i = 2; i < root; i++)
 	{
 		if (this->value % i != 0) continue;
 		else return false;
@@ -38,7 +38,7 @@ bool Prime::isValid() {
 bool Prime::checkPrime(int number) {
 	if (number < 2) return false;
 	double root = sqrt(number);
-	for (size_t i = 2; i < root; i++)
+	for (int i = 2; i < root; i++)
 	{
 		if (number % i != 0) continue;
 		else return false;
