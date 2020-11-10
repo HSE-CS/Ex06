@@ -2,7 +2,6 @@
 #include <iostream>
 
 int main() {
-
   Prime num1, num2;
   num1.setValue(4);
   std::cout << num1.getValue() << " - ";
@@ -16,7 +15,7 @@ int main() {
   std::cout << "Next prime number after " << num1.getValue()
             << " is " << num1.nextPrime().getValue() << '\n';
   int test_number = 17;
-  if (num1.testPrime(17)) {
+  if (num1.checkPrime(17)) {
     std::cout << test_number << " - prime number" << '\n';
   } else {
     std::cout << test_number << " - not prime number" << '\n';

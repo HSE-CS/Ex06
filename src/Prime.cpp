@@ -14,7 +14,7 @@ bool Prime::isValid() {
   return true;
 }
 
-bool Prime::testPrime(int num) {
+bool Prime::checkPrime(int num) {
   for (int i = 2; i <= sqrt(num); ++i) {
     if (num % i == 0) {
       return false;
@@ -22,6 +22,7 @@ bool Prime::testPrime(int num) {
   }
   return true;
 }
+
 
 Prime Prime::nextPrime() {
   int val = num + 1;
