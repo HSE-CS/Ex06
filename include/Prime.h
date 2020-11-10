@@ -3,6 +3,7 @@
 
 #include <cmath>
 
+
 class Prime {
 public:
   void setValue(int);

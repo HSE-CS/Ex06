@@ -2,6 +2,7 @@
 #include <iostream>
 
 int main() {
+
   Prime num1, num2;
   num1.setValue(4);
   std::cout << num1.getValue() << " - ";

@@ -4,6 +4,7 @@ void Prime::setValue(int num) { this->num = num; }
 
 int Prime::getValue() { return num; }
 
+
 bool Prime::isValid() {
   for (int i = 2; i <= sqrt(num); ++i) {
     if (num % i == 0) {
