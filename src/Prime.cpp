@@ -1,4 +1,4 @@
-#include "Prime.h"
+#include "Prime.h" 
 
 void Prime::setValue(int val){
 	this->value = val;
