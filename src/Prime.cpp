@@ -1,62 +1,54 @@
 #include "Prime.h"
 
-#include <iostream>
-
-using namespace std;
-
-bool Prime::checkPrime(int num)
+void Prime::setValue(int value)
 {
-    bool flag = true;
-    for (int i = 2; i * i <= num; i++)
-    {
-        if (num % i == 0)
-            flag = false;
-    }
-    return flag;
+	this->prime = value;
 }
-int Prime::countBetween(Prime& second)
+bool Prime::checkPrime(int value)
 {
-    int cnt = 0;
-    for (int i = value + 1; i < second.value; i++)
-    {
-        for (int i = second.value + 1; i < value; i++)
-            if (checkPrime(i))
-                cnt++;
-    }
-
-    return cnt;
-}
-
-Prime Prime::nextPrime()
-{
-    value++;
-    int copy_value = value;
-    copy_value++;
-    while (!checkPrime(value))
-        value++;
-    copy_value++;
-
-    Prime ans;
-    ans.value = value;
-    ans.value = copy_value;
-    return ans;
-}
-
-void Prime::setValue(int a)
-{
-    value = a;
-}
-int Prime::getValue()
-{
-    return value;
+	int flag = 1;
+	if (value == 1)
+		flag = 0;
+	else
+	{
+		for (int i = 2; i <= sqrt(value); i++)
+		{
+			if (value % i == 0)
+				flag = 0;
+		}
+	}
+	if (flag == 1)
+		return true;
+	else
+		return false;
 }
 bool Prime::isValid()
 {
-    bool flag = true;
-    for (int i = 2; i * i <= value; i++)
-    {
-        if (value % i == 0)
-            flag = false;
-    }
-    return flag;
+	return checkPrime(this->prime);
+}
+Prime Prime::nextPrime()
+{
+	int nextprime = this->prime + 1;
+	while (checkPrime(nextprime) != true)
+		nextprime++;
+	Prime primenext;
+	primenext.setValue(nextprime);
+	return primenext;
+}
+int Prime::countBetween(Prime& value)
+{
+	int left = min(this->prime, value.prime);
+	int right = max(this->prime, value.prime);
+	int counter = 0;
+	while (left < right)
+	{
+		left++;
+		if ((checkPrime(left) == true) && (left != right))
+			counter++;
+	}
+	return counter;
+}
+int Prime::getValue()
+{
+	return this->prime;
 }
