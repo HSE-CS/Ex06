@@ -24,7 +24,7 @@ int Prime::getValue() {
 
 int Prime::countBetween(Prime& val){
     int count = 0;
-    for (int i = min(value, val.getValue()) + 1; i < max(value, val.getValue()); i++){
+    for (int i = min(value, val.getValue()) + 1; i <= max(value, val.getValue()); i++){
         if (checkPrime(i)){
             count++;
         }
