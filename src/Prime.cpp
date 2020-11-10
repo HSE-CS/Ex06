@@ -37,7 +37,7 @@ Prime Prime::nextPrime(){
     size_t n_prime = value + 1;
     while(!checkPrime(n_prime))
         n_prime++;
-    Prime temp{};
+    Prime temp;
     temp.setValue(n_prime);
     return temp;
 }
