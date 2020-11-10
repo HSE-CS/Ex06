@@ -4,6 +4,7 @@
 
 #include "Prime.h"
 #include <iostream>
+#include <algorithm>
 
 void Prime::setValue(int n){
     value = n;
