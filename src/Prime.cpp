@@ -1,4 +1,8 @@
 #include "Prime.h"
+<<<<<<< HEAD
+=======
+
+>>>>>>> 28d608936242ecceb7a03280f07e64ec1ca19334
 #include <cmath>
 
 void Prime::setValue(int prime)
@@ -29,7 +33,7 @@ int Prime::countBetween(Prime& prime)
     int end = prime.prime;
     int count = 0;
     for (int i = begin; i < end; ++i) {
-        if (testPrime(i)) {
+        if (checkPrime(i)) {
             ++count;
         }
     }
@@ -38,7 +42,7 @@ int Prime::countBetween(Prime& prime)
 Prime Prime::nextPrime()
 {
     int val = prime + 1;
-    while (!testPrime(val)) {
+    while (!checkPrime(val)) {
         ++val;
     }
     Prime next_prime;
