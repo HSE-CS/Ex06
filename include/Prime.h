@@ -6,6 +6,8 @@
 #include <algorithm>
 using namespace std;
 
+//new upload
+
 typedef int prime_t;//создаём псевдоним, что prime_t это int
 class Prime
 {

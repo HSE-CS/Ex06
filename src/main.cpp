@@ -1,5 +1,7 @@
 #include "Prime.h"
 
+//new upload
+
 int main()
 {
 	Prime num1, num2;//создание объекта класса
