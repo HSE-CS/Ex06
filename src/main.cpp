@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Prime.h"
 
-int main() {
+int main() { 
 	Prime num1, num2;
 	num1.setValue(5);
 	std::cout << "num1: " << num1.getValue() << std::endl;
