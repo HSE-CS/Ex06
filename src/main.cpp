@@ -1,4 +1,4 @@
-#include "../include/Prime.h"
+#include "Prime.h"
 
 int main(){
     Prime number;
