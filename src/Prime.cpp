@@ -18,7 +18,7 @@ int Prime::countBetween(Prime &x) {
     if (prime > x.prime) { pmax=prime; pmin=x.prime; }
     else { pmax=x.prime; pmin=prime; }
 
-    for(int i=pmin;i<pmax;i++) if (checkPrime(i)) count++;
+    for(int i=pmin+1;i<pmax;i++) if (checkPrime(i)) count++;
     return count;
 }
 
