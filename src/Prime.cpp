@@ -40,7 +40,7 @@ int Prime::countBetween(Prime &p){
 Prime Prime::nextPrime(){
 	Prime next;
 	next.val = 0;
-	for (int i = val+1; i<INT_MAX; ++i) {
+	for (int i = val+1; i<32000; ++i) {
 		if (Prime::checkPrime(i)) {
 			next.val = i;
 			break;
