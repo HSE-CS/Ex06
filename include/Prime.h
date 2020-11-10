@@ -2,6 +2,8 @@
 #define PRIME_H
 #ifdef PRIME_H
 #include<cmath>
+#include <iostream>
+using namespace std;
 class Prime
 {
 public:
