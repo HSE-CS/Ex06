@@ -1,6 +1,7 @@
 #include "Prime.h"
 #include <iostream>
 #include <cstring>
+#include <math.h>
 
 void Prime::setValue(int number) {
 
