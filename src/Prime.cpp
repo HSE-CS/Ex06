@@ -23,7 +23,16 @@ bool Prime::isValid() {
 
 int Prime::countBetween(Prime &pr) {
     int count = 0;
-    for (int i = pr.prime + 1; i < prime; ++i) {
+    int start = 0;
+    int end = 0;
+    if (pr.prime > prime){
+        start = prime;
+        end = pr.prime;
+    } else{
+        start =pr.prime;
+        end = prime;
+    }
+    for (int i = start + 1; i < end; ++i) {
         if (checkPrime(i)) {
             count++;
         }

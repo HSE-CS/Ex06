@@ -1,7 +1,7 @@
 #include <iostream>
 #include "Prime.h"
 
-int main(){  
+int main(){
     Prime num1,num2;
 
     num1.setValue(3);
@@ -15,4 +15,5 @@ int main(){
     std::cout << "Is 83 valid? " << num2.isValid() << std::endl;;
 
     std::cout << "Amount of primes between 3 and 83: " << num2.countBetween(num1) << std::endl;
+    return 0;
 }
