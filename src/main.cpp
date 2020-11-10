@@ -9,6 +9,6 @@ int main() {
     n2 = n1.nextPrime();
     cout<<n1.isValid()<<" "<<n2.checkPrime(15)<<endl;
     Prime n3 = n3.nextPrime();
-    cout<<n2.countBetween(n3)
+    cout<<n2.countBetween(n3);
 }
 
