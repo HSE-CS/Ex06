@@ -7,10 +7,10 @@ private:
     int num;
 
 public:
-    void setValue(int num);
+    void setValue(int);
     bool isValid();
-    bool testPrime(int num);
-    int countBetween(Prime& num);
+    bool checkPrime(int);
+    int countBetween(Prime&);
     Prime nextPrime();
     int getValue();
 };

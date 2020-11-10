@@ -8,20 +8,20 @@ void Prime::setValue(int num)
 
 bool Prime::isValid()
 {
-    return testPrime(this->num);
+    return checkPrime(this->num);
 }
 
 Prime Prime::nextPrime()
 {
     Prime next_num;
     int x = this->num + 1;
-    while (!testPrime(x))
+    while (!checkPrime(x))
         x++;
     next_num.num = x;
     return next_num;
 }
 
-bool Prime::testPrime(int num)
+bool Prime::checkPrime(int num)
 {
     if (num < 2)
         return false;
@@ -49,7 +49,7 @@ int Prime::countBetween(Prime& num)
     Prime num2;
     int count = 0;
     for (i; i < j; i++)
-        if (num2.testPrime(i))
+        if (num2.checkPrime(i))
             ++count;
 
     return count;

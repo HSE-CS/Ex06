@@ -13,8 +13,8 @@ int main()
     num2=num1.nextPrime();
     cout << "next num1 -> num2 = " << num2.getValue() << "\n\n";
 
-    cout << "17 is prime? answer: " << num1.testPrime(17) << endl;
-    cout << "214 is prime? answer: " << num1.testPrime(214) << "\n\n";
+    cout << "17 is prime? answer: " << num1.checkPrime(17) << endl;
+    cout << "214 is prime? answer: " << num1.checkPrime(214) << "\n\n";
 
     num1.setValue(190);
     num2.setValue(61);
