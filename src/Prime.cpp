@@ -27,7 +27,7 @@ bool Prime::checkPrime(int value)
 
 int Prime::countBetween(Prime& next_prime)
 {
-	int cnt = 0;
+	int cnt = -1;
 	for (int i = val; i < next_prime.val; i += 2)
 		if (Prime::checkPrime(i) == true)
 			cnt++;
