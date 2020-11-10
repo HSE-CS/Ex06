@@ -1,6 +1,6 @@
 #include "Prime.h"
 #include <cmath>
-
+#include <iostream>
 void Prime::setValue(int value)
 {
 	this->num = value;
@@ -36,8 +36,9 @@ int Prime::countBetween(Prime &prime)
 	while (next.getValue() < b) {
 		next = next.nextPrime();
 		counter++;
+		std::cout << next.getValue() << ' ';
 	}
-	return counter;
+	return counter - 1;
 
 }
 
