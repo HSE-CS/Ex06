@@ -1,4 +1,4 @@
-#ifdef PRIME_H
+#ifndef PRIME_H
 #define PRIME_H
 
 class Prime
