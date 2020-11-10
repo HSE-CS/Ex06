@@ -1,12 +1,12 @@
 #include "Prime.h"
 
-void Prime::setValue(int num) //- установить число
+void Prime::setValue(int num) //- СѓСЃС‚Р°РЅРѕРІРёС‚СЊ С‡РёСЃР»Рѕ
 	{
 	number = num;
 	} 
 
 
-bool Prime::isValid() //- проверка, действительно ли установленное число простое
+bool Prime::isValid() //- РїСЂРѕРІРµСЂРєР°, РґРµР№СЃС‚РІРёС‚РµР»СЊРЅРѕ Р»Рё СѓСЃС‚Р°РЅРѕРІР»РµРЅРЅРѕРµ С‡РёСЃР»Рѕ РїСЂРѕСЃС‚РѕРµ
 { 
 	for (int i = 2; i <= sqrt(number); i++)
 		if (number % i == 0)
@@ -15,25 +15,22 @@ bool Prime::isValid() //- проверка, действительно ли установленное число простое
 
 } 
 
-bool Prime::checkPrime(int num)// - проверка переданного числа на простоту
+bool Prime::checkPrime(int num)// - РїСЂРѕРІРµСЂРєР° РїРµСЂРµРґР°РЅРЅРѕРіРѕ С‡РёСЃР»Р° РЅР° РїСЂРѕСЃС‚РѕС‚Сѓ
 	{
 		for (int i = 2; i <= sqrt(num); i++)
 			if (num % i == 0)
 				return false;
 		return true;
 	}
-int Prime::countBetween(Prime& num2)// - подсчет количества простых чисел между установленным и переданным
+int Prime::countBetween(Prime& num2)// - РїРѕРґСЃС‡РµС‚ РєРѕР»РёС‡РµСЃС‚РІР° РїСЂРѕСЃС‚С‹С… С‡РёСЃРµР» РјРµР¶РґСѓ СѓСЃС‚Р°РЅРѕРІР»РµРЅРЅС‹Рј Рё РїРµСЂРµРґР°РЅРЅС‹Рј
 {
 	int k = 0;
 	for (int i = number + 1; i < num2.number; i++)
-	{
-		for (int i = num2.number + 1; i < number; i++)
-			if (checkPrime(i))
-				k++;
-	}
+		if (checkPrime(i)==1)
+			k++;
 	return k;
 }
-Prime Prime::nextPrime()// - возвращение простого числа, расположенного следом за установленным
+Prime Prime::nextPrime()// - РІРѕР·РІСЂР°С‰РµРЅРёРµ РїСЂРѕСЃС‚РѕРіРѕ С‡РёСЃР»Р°, СЂР°СЃРїРѕР»РѕР¶РµРЅРЅРѕРіРѕ СЃР»РµРґРѕРј Р·Р° СѓСЃС‚Р°РЅРѕРІР»РµРЅРЅС‹Рј
 {
 	Prime nvalue;
 	int n = number;
@@ -44,7 +41,7 @@ Prime Prime::nextPrime()// - возвращение простого числа, расположенного следом з
 	return nvalue;
 }
 		
-int Prime::getValue()// - возвращение установленного числа.
+int Prime::getValue()// - РІРѕР·РІСЂР°С‰РµРЅРёРµ СѓСЃС‚Р°РЅРѕРІР»РµРЅРЅРѕРіРѕ С‡РёСЃР»Р°.
 	{
 	return number;
 	}
