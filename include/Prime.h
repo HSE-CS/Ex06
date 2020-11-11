@@ -1,4 +1,5 @@
-#pragma once
+#ifndef PRIME_H
+#define PRIME_H
 
 
 
@@ -17,3 +18,5 @@ public:
 	int getValue();
 
 };
+
+#endif PRIME_H
