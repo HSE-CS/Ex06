@@ -22,7 +22,7 @@ bool Prime::checkPrime(int val) {
 int Prime::countBetween(Prime& simple) {
 	int count{ 0 };
 
-	for (int i = ((simple.number > this->number) ? this->number : simple.number + 1), max = ((simple.number > this->number) ? simple.number : this->number); i < max; ++i){
+	for (int i = ((simple.number > this->number) ? this->number + 1 : simple.number + 1), max = ((simple.number > this->number) ? simple.number : this->number); i < max; ++i){
 		if (checkPrime(i)) {
 			count++;
 		}
