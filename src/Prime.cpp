@@ -26,7 +26,7 @@ bool Prime::checkPrime(int num) {
 
 Prime Prime::nextPrime() {
   int val = num + 1;
-  while (!testPrime(val)) {
+  while (!checkPrime(val)) {
     ++val;
   }
   Prime next_prime;
@@ -39,7 +39,7 @@ int Prime::countBetween(Prime &prime) {
   int end = prime.num - 1;
   int count = 0;
   for (int i = begin; i <= end; ++i) {
-    if (testPrime(i)) {
+    if (checkPrime(i)) {
       ++count;
     }
   }
