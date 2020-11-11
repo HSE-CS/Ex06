@@ -26,5 +26,10 @@ int main()
 	num1.setValue(4);
 	cout << "4 is prime number means " << num1.isValid() << endl;
 
+	num1.setValue(3);
+	num2.setValue(13);
+	count = num1.countBetween(num2);
+	cout << "Primes between 3 and 13 " << count << endl;
+
 	return 0;
 }

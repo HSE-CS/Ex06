@@ -58,10 +58,20 @@ bool Prime::isValid()
 	return newP.checkPrime(prime);
 }
 
-int Prime::countBetween(Prime& first)
+int Prime::countBetween(Prime& other)
 {
-	int newP = first.getValue() + 1, counter = 0, lastValue = prime;
+	int newP, counter = 0, lastValue;
 	Prime next;
+
+	if (other.getValue() < prime) {
+		newP = other.getValue() + 1;
+		lastValue = prime;
+	}
+	else {
+		newP = prime + 1;
+		lastValue = other.getValue();
+	}
+
 	while (newP < lastValue) {
 		while (!next.checkPrime(newP)) {
 			newP++;
