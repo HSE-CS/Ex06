@@ -11,7 +11,7 @@ bool Prime::isValid() {
 	}
 	return true;
 }
-bool Prime::testPrime(int val) {
+bool Prime::checkPrime(int val) {
 	for (int i = 2; i < val; ++i) {
 		if (val % i == 0) {
 			return false;
@@ -23,7 +23,7 @@ int Prime::countBetween(Prime& simple) {
 	int count{ 0 };
 
 	for (int i = ((simple.number > this->number) ? this->number : simple.number + 1), max = ((simple.number > this->number) ? simple.number : this->number); i < max; ++i){
-		if (testPrime(i)) {
+		if (checkPrime(i)) {
 			count++;
 		}
 	}
@@ -34,7 +34,7 @@ Prime Prime::nextPrime() {
 	int i = 2;
 	
 	while (1) {
-		if (testPrime(i) && (i > this->number)) {
+		if (checkPrime(i) && (i > this->number)) {
 			simple.setValue(i);
 			return simple;
 		}

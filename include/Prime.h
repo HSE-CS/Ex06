@@ -6,7 +6,7 @@ private:
 public:
 	void setValue(int);
 	bool isValid();
-	bool testPrime(int);
+	bool checkPrime(int);
 	int countBetween(Prime& );
 	Prime nextPrime();
 	int getValue();
