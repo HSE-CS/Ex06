@@ -1,8 +1,5 @@
 #include "Prime.h"
-<<<<<<< HEAD
-=======
 
->>>>>>> 28d608936242ecceb7a03280f07e64ec1ca19334
 #include <cmath>
 
 void Prime::setValue(int prime)
