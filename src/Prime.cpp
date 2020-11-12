@@ -7,24 +7,20 @@ void Prime::setValue(int num) {
 
 
 bool Prime::isValid() {
-	int y = 0;
-	bool pr = true;
 	if (num1 == 1) return false;
 	for (unsigned int j = 2; j <= ((num1)/2); j++) {
-		if (num1 % j == 0) pr= false;
+		if (num1 % j == 0) return false;
 	}
-	return pr;
+	return true;
 }
 
 
 bool Prime::checkPrime(int num) {
-	int y = 0;
-	bool pr = true;
 	if (num == 1) return false;
 	for (unsigned int j = 2; j <= ((num) / 2); j++) {
-		if (num % j == 0) pr= false;
+		if (num % j == 0) return false;
 	}
-	return pr;
+	return true;
 }
 
 
@@ -51,7 +47,7 @@ Prime Prime::nextPrime() {
 		if (checkPrime(i)) break;
 	}
 	Prime num2;
-	num2.num1=i;
+	num2.setValue(i);
 	return num2;
 }
 
