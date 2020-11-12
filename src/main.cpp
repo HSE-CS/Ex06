@@ -4,7 +4,6 @@ int main() {
 
   Prime num1, num2;
   num1.setValue(2);
-  num2 = num1.checkPrime();
   bool result = num1.checkPrime(17);
   num2.setValue(17);
   int count = num2.countBetween(num1);
