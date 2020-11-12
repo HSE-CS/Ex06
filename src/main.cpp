@@ -9,6 +9,7 @@ int main()
 	num2.setValue(17);              // в num2 устанавливаем 17
 	int count = num2.countBetween(num1); // count=5
 	bool ans = num2.isValid();        // true
-
+	int n = num2.getValue();
+	std::cout << n;
 	return 0;
 }
