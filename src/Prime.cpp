@@ -29,7 +29,7 @@ bool Prime::checkPrime(int a){
 
 int Prime::countBetween(Prime& temp){
     size_t count = 0;
-    for (size_t i = std::min(value, temp.value); i < std::max(value, temp.value); ++i)
+    for (size_t i = std::min(value, temp.value) + 1; i < std::max(value, temp.value); ++i)
         if(checkPrime(i)) count++;
     return count;
 }
