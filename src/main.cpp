@@ -1,15 +1,19 @@
 #include "Prime.h"
+#include <iostream>
 
 int main()
 {
-	Prime num1, num2;
-	num1.setValue(2);
-	num2 = num1.nextPrime();          // в num2 устанавливается 3
-	bool result = num1.checkPrime(17); // true
-	num2.setValue(17);              // в num2 устанавливаем 17
-	int count = num2.countBetween(num1); // count=5
-	bool ans = num2.isValid();        // true
-	int n = num2.getValue();
-	std::cout << n;
+	Prime n1, n2, n3;
+	n1.setValue(3);
+	cout << n1.getValue() << endl;
+	cout << n1.isValid() << endl;
+	cout << n1.checkPrime(11) << endl;
+	n3.setValue(17);
+	cout << n1.countBetween(n3) << endl;
+	n2 = n1.nextPrime();
+	cout << n2.getValue() << endl << endl;
+	n1.setValue(4);
+	cout << n1.getValue() << endl;
+	cout << n1.isValid();
 	return 0;
 }
