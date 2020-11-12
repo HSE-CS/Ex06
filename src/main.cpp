@@ -1,5 +1,5 @@
 #include <iostream>
-#include "prime.h"
+#include "Prime.h"
 
 int main()
 {
