@@ -13,8 +13,9 @@ bool Prime::isValid(){
         if (value % i == 0) {
             return false;
         }
-        return true;
+        
     }
+    return true;
 }
 
  bool Prime::checkPrime(int a){
@@ -22,8 +23,8 @@ bool Prime::isValid(){
          if (a % i == 0) {
              return false;
          }
-         return true;
      }  
+     return true;
 }
 
  int Prime::countBetween(Prime& num2) {
