@@ -19,21 +19,21 @@ bool Prime::isValid(){
 }
 
  bool Prime::checkPrime(int a){
+     bool ans = true;
      for (int i = 2; i <= sqrt(a); i++) {
          if (a % i == 0) {
-             return false;
+             ans= false;
          }
      }  
-     return true;
+     return ans;
 }
 
  int Prime::countBetween(Prime& num2) {
      int count = 0;
-     for (int i = value+1; i < num2.value; i++) {
-         for (int i = num2.value + 1; i < value; i++) {
-             if (checkPrime(i)) {
-                 count = count + 1;
-             }
+     for (int i = value + 1; i < num2.value; i++)
+     {
+         if (checkPrime(i)) {
+             count++;
          }
      }
      return count;
