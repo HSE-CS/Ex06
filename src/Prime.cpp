@@ -9,7 +9,12 @@ void Prime::setValue(int a){
 }
 
 bool Prime::isValid(){
-    return checkPrime(value);
+    for (int i = 2; i <= sqrt(value); i++) {
+        if (value % i == 0) {
+            return false;
+        }
+        return true;
+    }
 }
 
  bool Prime::checkPrime(int a){
@@ -21,33 +26,27 @@ bool Prime::isValid(){
      }  
 }
 
- int Prime::countBetween(Prime&a) {
-     int s = 0;
-     if (a.value > value) {
-         for (int i = value + 1; i < a.value; i++) {
-             if (checkPrime(i)==true){
-                 s = s + 1;
+ int Prime::countBetween(Prime& num2) {
+     int count = 0;
+     for (int i = value+1; i < num2.value; i++) {
+         for (int i = num2.value + 1; i < value; i++) {
+             if (checkPrime(i)) {
+                 count = count + 1;
              }
          }
      }
-     else {
-         for (int i = a.value + 1; i < value; i++) {
-             if (checkPrime(i) == true) {
-                 s = s + 1;
-             }
-         }
-         return s;
-     }
-
+     return count;
  }
 
  Prime Prime::nextPrime() {
      Prime neww;
-     int n=getValue()+1;
-     while (!checkPrime(n)) {
-         n = n + 1;
+     for (int i = value + 1;; i++) {
+         if (checkPrime(i) == 1)
+         {
+             neww.value = i;
+             return neww;
+         }
      }
-     neww.setValue(n);
      return neww;
   
  }
