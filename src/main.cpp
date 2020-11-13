@@ -12,7 +12,7 @@ cout << v.getValue()<< endl;
 Prime w;
 w = v.nextPrime();
 
-bool tf = v.isValid;
+bool tf = v.isValid();
 cout << tf << endl;
 
 bool tf1 = v.checkPrime(13);
