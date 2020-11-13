@@ -39,7 +39,7 @@ int Prime::countBetween(Prime &p) {
 
 Prime Prime::nextPrime() {
     Prime p;
-    int x = this->value;
+    int x = this->value + 1;
     while (!checkPrime(x)){
         x++;
     }
