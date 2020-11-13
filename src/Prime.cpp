@@ -20,7 +20,7 @@ bool Prime::isValid() {
 }
 
 bool Prime::checkPrime(int x) {
-    for (int i = 2; i < x / 2; ++i) {
+    for (int i = 2; i < x / 2+1; ++i) {
         if (x % i == 0)
             return false;
     }
@@ -29,9 +29,10 @@ bool Prime::checkPrime(int x) {
 
 int Prime::countBetween(Prime &p) {
     int counter = 0;
-    for (int i = this->value+1; i < p.getValue(); ++i) {
-        if (checkPrime(i))
+    for (int i = this->value + 1; i < p.getValue(); ++i) {
+        if (checkPrime(i)) {
             counter++;
+        }
     }
     return counter;
 }

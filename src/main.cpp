@@ -1,6 +1,7 @@
 #include "Prime.h"
 
 int main(){
+
     Prime *p = new Prime();
     cout << "Input a number:\n";
     int input; cin >> input;
@@ -16,5 +17,6 @@ int main(){
     cout << "Amount of valid numbers between " << p->getValue() << " and " << new_p.getValue() << ":\n" << p->countBetween(new_p) << endl;
 
     cout << "Next prime after " << p->getValue() << ":\n" << p->nextPrime().getValue() << endl;
+
     return 0;
 }
