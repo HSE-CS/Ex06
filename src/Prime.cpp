@@ -49,7 +49,7 @@
 				result.setValue(num);
 				return result;
 			}
-				
+			num++;
 			
 		}
 	}
