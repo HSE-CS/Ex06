@@ -19,7 +19,6 @@ vector<int> Prime::createPrimesVector(int numTo) {
 
 void Prime::setValue(int value) {
     this->value = value;
-    //this->primes = createPrimesVector(sqrt(value));
 }
 
 bool Prime::isValid() const {
