@@ -1,20 +1,20 @@
 ﻿#include <iostream>
 #include "Prime.h"
 
-using namespace std;
 
+int main() {
 
+	Prime n1, n2;
 
-int main()
-{
-	Prime num1, num2;
-	num1.setValue(2);
-	num2 = num1.nextPrime(); 
-	bool result = num1.checkPrime(17); 
-	cout << "result " << result << endl;
-	num2.setValue(17); 
-	int count = num2.countBetween(num1); 
-	cout << "count " << count << endl;
-	bool ans = num2.isValid(); 
-	cout << "ans " << ans << endl;
+	n1.setValue(13);
+	if (n1.isValid()) {
+
+		n2 = n1.nextPrime();
+		std::cout << n2.getValue();
+
+		auto res = n1.countBetween(n2);
+		std::cout << (n1.checkPrime(res) ? "Prime" : "Not prime");
+	}
+
+	return 0;
 }
