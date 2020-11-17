@@ -1,13 +1,15 @@
+#define PRIME_H
 
 class Prime {
 public:
-	void setValue(int num);
-	bool isValid();
-	bool checkPrime(int value);
-	int countBetween(Prime& pr);
-	Prime nextPrime();
+	void setValue(int);
+	bool isValid() const;
+	bool checkPrime(int) const;
+	int countBetween(Prime&) const;
+	Prime nextPrime() const;
 	int getValue() const;
-
 private:
-	int num = 2;
-}
+	int number;
+
+};
+

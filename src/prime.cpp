@@ -1,56 +1,41 @@
 #include "Prime.h"
 
-void Prime::setValue(int num) {
-	this->num = num;
+void Prime::setValue(int new_number) {
+	number = new_number;
 }
-
-bool Prime::checkPrime(int value) {
-	if (value <= 1)
-		return false;
-	else {
-		for (int i = 2; i < value; i++) {
-			if (value % i == 0)
-				return false;
-		}
-		return true;
+bool Prime::checkPrime(int value) const {
+	int d = 2;
+	while (d * d <= value) {
+		if (value % d == 0) return false;
+		d++;
 	}
+	return true;
+}
+bool Prime::isValid() const {
+	return checkPrime(number);
 }
 
-bool Prime::isValid() {
-	return checkPrime(this->num);
-}
-
-int Prime::countBetween(Prime& primeNum) {
+int Prime::countBetween(Prime& value) const {
+	int start = value.getValue();
+	int end = number;
 	int count = 0;
-	int start = 0;
-	int end = 0;
-	if (num > primeNum.num) {
-		start = primeNum.num;
-		end = num;
+	if (value.getValue() > number) {
+		start = number;
+		end = value.getValue();
 	}
-	else {
-		start = num;
-		end = primeNum.num;
-	}
-	for (int i = ++start; i < end; i++) {
-		if (checkPrime(i)) {
-			count++;
-		}
+	for (int i = start + 1; i < end; i++) {
+		if (checkPrime(i)) count++;
 	}
 	return count;
 }
-
-Prime Prime::nextPrime() {
-	Prime prime{};
-	for (int i = num + 1; i <= num * num; i++) {
-		if (checkPrime(i)) {
-			prime.setValue(i);
-			break;
-		}
+Prime Prime::nextPrime() const {
+	Prime value;
+	value.setValue(number + 1);
+	while (!value.isValid()) {
+		value.setValue(value.getValue() + 1);
 	}
-	return prime;
+	return value;
 }
-
 int Prime::getValue() const {
-	return this->num;
+	return number;
 }
