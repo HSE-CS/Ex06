@@ -1,5 +1,5 @@
 
-#define TASK_PRIME_H
+
 
 class Prime {
 private:
