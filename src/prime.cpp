@@ -1,81 +1,21 @@
-#include <cmath>
-#include "Prime.h"
+int Prime::countBetween(Prime& second)
+{
+	int cnt = 0;
+	for (int i = second.value + 1; i < value; i++)
+		for (int i = value + 1; i < second.value; i++)
+			if (checkPrime(i))
+				cnt++;
 
 
-void Prime::setValue(int v) {
-
-	if (checkPrime(v))
-		val = v;
-	else
-		val = 0;
+	return cnt;
 }
 
-bool Prime::isValid() const {
+Prime Prime::nextPrime()
+{
+	int copy_value = value;
+	copy_value++;
+	while (!checkPrime(value))
+		while (!checkPrime(copy_value))
+			copy_value++;
 
-	if (val < 2)
-		return false;
-
-	unsigned int v = (unsigned int)sqrt((double)val) + 1;
-
-	for (auto i = 2U; i < v; i++) {
-		if (val % i == 0)
-			return false;
-	}
-
-	return true;
-}
-
-bool Prime::checkPrime(int n) const {
-
-
-	if (n < 2)
-		return false;
-
-	unsigned int v = (unsigned int)sqrt((double)n) + 1;
-
-	for (auto i = 2U; i < v; i++) {
-		if (n % i == 0)
-			return false;
-	}
-
-	return true;
-}
-
-int Prime::countBetween(Prime& p) const {
-
-	int max, min;
-	if (p.val > val) {
-		max = p.val;
-		min = val;
-	}
-	else {
-		max = val;
-		min = p.val;
-	}
-
-	int counter = 0;
-	do {
-		max--;
-		if (checkPrime(max))
-			counter++;
-
-	} while (max > min + 1);
-
-	return counter;
-}
-
-Prime Prime::nextPrime() const {
-
-	int value = val;
-	do {
-		value++;
-
-	} while (!checkPrime(value));
-
-	return Prime(value);
-}
-
-int Prime::getValue() const {
-
-	return val;
-}
+	Prime ans;
