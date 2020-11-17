@@ -1,4 +1,4 @@
-#ifndef TASK_PRIME_H
+
 #define TASK_PRIME_H
 
 class Prime {
@@ -14,4 +14,3 @@ public:
 	int getValue() const;
 };
 
-#endif
