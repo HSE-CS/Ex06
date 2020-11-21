@@ -36,7 +36,7 @@ bool Prime::checkPrime(int given_value) {
 int Prime::countBetween(Prime &other) {
     int counter = 0;
 
-    for (int number = min(other.value, this->value); number < max(other.value, this->value); ++number)
+    for (int number = min(other.value, this->value) + 1; number < max(other.value, this->value); ++number)
         if (checkPrime(number))
             counter += checkPrime(number) ? 1 : 0;
 
