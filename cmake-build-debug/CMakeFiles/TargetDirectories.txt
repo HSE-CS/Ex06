@@ -1,0 +1,4 @@
+E:/Clion/HSE-CS/Ex06/cmake-build-debug/CMakeFiles/edit_cache.dir
+E:/Clion/HSE-CS/Ex06/cmake-build-debug/CMakeFiles/task_lib.dir
+E:/Clion/HSE-CS/Ex06/cmake-build-debug/CMakeFiles/task.dir
+E:/Clion/HSE-CS/Ex06/cmake-build-debug/CMakeFiles/rebuild_cache.dir

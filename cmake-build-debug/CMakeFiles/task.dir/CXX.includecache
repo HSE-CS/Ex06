@@ -1,0 +1,16 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+E:/Clion/HSE-CS/Ex06/include/Prime.h
+iostream
+-
+
+E:/Clion/HSE-CS/Ex06/src/main.cpp
+../include/Prime.h
+E:/Clion/HSE-CS/Ex06/include/Prime.h
+
