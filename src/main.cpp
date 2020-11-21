@@ -7,11 +7,11 @@
 
 
 int main() {
-    Prime numberOne;
-    Prime numberTwo;
+    Prime numberOne{};
+    Prime numberTwo{};
     Prime modulo{};
 
-    modulo.setValue(1e9 + 8);
+    modulo.setValue(1e9 + 7);
 
     std::cout << modulo.getValue() << '\n';
     std::cout << modulo.isValid() << '\n';

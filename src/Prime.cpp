@@ -26,11 +26,10 @@ bool Prime::checkPrime(int given_value) {
     bool isPrime = true;
 
     for (int divider = 2; divider * divider <= given_value; ++divider)
-        if (!(this->value % divider)) {
+        if (!(given_value % divider)) {
             isPrime = false;
             break;
         }
-
     return isPrime;
 }
 
@@ -39,7 +38,7 @@ int Prime::countBetween(Prime &other) {
 
     for (int number = min(other.value, this->value); number < max(other.value, this->value); ++number)
         if (checkPrime(number))
-            counter += checkPrime(number);
+            counter += checkPrime(number) ? 1 : 0;
 
     return counter;
 }
