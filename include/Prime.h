@@ -1,16 +1,19 @@
-#include <math.h>
-#include <algorithm>
-#include <stdlib.h>
-class Prime{
-public:
-    void setValue(int);
-    bool isValid();
-    bool checkPrime(int);
-    int countBetween(Prime&);
-    Prime nextPrime();
-    int getValue();
+#ifndef PRIME_H
+#define PRIME_H
+
+
+class Prime
+{
 private:
-    int value;
+	int primeNumber;
+public:
+	void setValue(int);
+	bool isValid();
+	bool checkPrime(int);
+	int countBetween(Prime&);
+	Prime nextPrime();
+	int getValue() const;
 };
 
-#endif
+
+#endif // !PRIME_H

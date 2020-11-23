@@ -1,27 +1,31 @@
 #include "Prime.h"
 #include <iostream>
+
+
 int main()
 {
-    Prime pr_1,pr_2;
+    Prime num1, num2;
+    num1.setValue(53);
 
-    pr_1.setValue(5); // set 5 in pr_1
-    int val = pr_1.getValue(); // val = 5
-    std::cout << val << "\n";
+    num2 = num1.nextPrime();                  
+    std::cout << "The first number is: " << num1.getValue() << std::endl;
+    std::cout << "The second number is: " << num2.getValue() << std::endl;
 
-    pr_2 = pr_1.nextPrime(); // set 7 in pr_2
-    val = pr_2.getValue(); // val = 7
-    std::cout << val << "\n";
+    int number = 16;
+    bool result = num1.checkPrime(number);        
+    std::cout << "Is the " << number << " prime? " << (result == true ? "true" : "false") << std::endl;
 
-    bool result = pr_1.isValid(); // true, because 5 is prime
-    std::cout << result << "\n";
+    num2.setValue(17);                        
+    std::cout << "The second number is: " << num2.getValue() << std::endl;
 
-    result = pr_1.checkPrime(28); //false, because 28 isn't prime
-    std::cout << result << "\n";
+    std::cout << "The next prime number of the second number is: " << num2.nextPrime().getValue() << std::endl;
 
-    pr_1.setValue(71); // set 71 in pr_1
-    pr_2.setValue(89); // set 89 in pr_2
+    int count = num2.countBetween(num1);       
+    std::cout << "The number of prime numbers between the first and the second numbers is: " << count << std::endl;
 
-    int c = pr_1.countBetween(pr_2); // count = 3
-    std::cout << c << "\n";
-    return 0;
+    bool ans = num2.isValid();                 
+    std::cout << "Is the second prime number valid? " << (ans == true ? "true" : "false") << std::endl;
+
+
+	return 0;
 }
