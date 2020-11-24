@@ -25,17 +25,19 @@ bool Prime::checkPrime(int num){
     return num != 1;
 }
 int Prime::countBetween(Prime& num){
-    int g = num.getValue() + 1;
+    int g = num.getValue();
     if (g < number)
-        return _countBetween(g, number);
+        return _countBetween(g+1, number);
     else
-        return _countBetween(number, g);
+        return _countBetween(number+1, g);
 }
 Prime Prime::nextPrime(){
-    int x = number;
+    Prime newNumber{};
+    int x = number + 1;
     while(!checkPrime(x))
         x++;
-    setValue(x);
+    newNumber.setValue(x);
+    return newNumber;
 }
 int Prime::getValue() {
     return number;
