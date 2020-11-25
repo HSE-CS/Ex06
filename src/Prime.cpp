@@ -1,5 +1,4 @@
 #include <cmath>
-#include <iostream>
 #include <Prime.h>
 
 void Prime::setValue(int num) {
@@ -7,7 +6,7 @@ void Prime::setValue(int num) {
 }
 
 bool Prime::checkPrime(int num) {
-    for (unsigned int i = 2; i < sqrt(num); i++)
+    for (unsigned int i = 2; i < num; i++)
         if (num % i == 0)
             return false;
     return true;
