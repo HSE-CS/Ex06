@@ -1,4 +1,5 @@
 #include <cmath>
+#include <iostream>
 #include <Prime.h>
 
 void Prime::setValue(int num) {
@@ -16,7 +17,7 @@ bool Prime::isValid() {
     return checkPrime(this->value);
 }
 
-
+/*
 int Prime::countBetween(Prime &num) {
     int a = fmin(this->value, num.value) + 1;
     int b = fmax(this->value, num.value);
@@ -30,6 +31,7 @@ int Prime::countBetween(Prime &num) {
     }
     return count;
 }
+*/
 
 Prime Prime::nextPrime() {
     Prime next_p;
@@ -45,4 +47,15 @@ int Prime::getValue() {
     return this->value;
 }
 
+int Prime::countBetween(Prime &prime) {
+    int a = prime.value < this->value ? prime.value : this->value;
+    int b = prime.value > this->value ? prime.value : this->value;
 
+    int count = 0;
+    while (a < b){
+        if (checkPrime(a) == true)
+            count++;
+        a++;
+    }
+    return count;
+}
