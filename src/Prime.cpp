@@ -47,14 +47,23 @@ int Prime::getValue() {
 }
 
 int Prime::countBetween(Prime &prime) {
-    int a = prime.value < this->value ? prime.value : this->value;
-    int b = prime.value > this->value ? prime.value : this->value;
-
-    int count = 0;
-    while (a < b){
-        if (checkPrime(a) == true)
-            count++;
-        a++;
+    int max,min;
+    if (prime.value > value) {
+        max = prime.value;
+        min = value;
     }
+    else {
+        max = value;
+        min = prime.value;
+    }
+
+    int count=0;
+    do {
+        max--;
+        if (checkPrime(max))
+            count++;
+
+    } while (max > min + 1);
+
     return count;
 }
